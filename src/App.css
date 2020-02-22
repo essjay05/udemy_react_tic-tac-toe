@@ -1,38 +1,49 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRL9LuaJ4B71_eZEoEjiFZFLxDdHDBzmvbif69KThkvmVXUqPoi");
+  object-fit: fill;
+}
+
+.square {
+  height: 8.5rem;
+  width: 8.5rem;
+  border-radius: 5%;
+  border: .75rem #0652DD solid;
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 6rem;
+  opacity: .65;
+  line-height: 1;
+  float: left;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  margin: .5rem;
 }
 
-.App-link {
-  color: #61dafb;
+.square:focus {
+  outline: none;
 }
+/* Board */
+.board-row:after {
+  clear: both;
+  content: '';
+  display: table;
+}
+/* End Board */
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Game */
+.game {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
 }
+/* End Game */
